@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="true"
+    android:layout_centerHorizontal="true"
+    android:orientation="vertical"
+    tools:context=".CompareFrames">
+
+    <ImageView
+        android:id="@+id/originalImageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/original_frame"
+        android:scaleType="fitCenter" />
+
+    <ImageView
+        android:id="@+id/rehearsalImageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:contentDescription="@string/rehearsal_frame"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+    <Button
+        android:id="@+id/viewOBodyCascade"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Original Body Cascade"
+        android:onClick="ViewBodyCascadeOriginal"
+        android:layout_gravity="start"
+        android:layout_weight="1
+"/>
+
+    <Button
+        android:id="@+id/viewRBodyCascade"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Rehearsal Body Cascade"
+        android:onClick="ViewBodyCascadeRehearsal"
+        android:layout_gravity="end"
+        android:layout_weight="1"/>
+    </LinearLayout>
+
+</LinearLayout>

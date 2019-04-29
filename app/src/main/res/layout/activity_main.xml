@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/trimVideo"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:onClick="TrimVideo"
+        android:text="Trim Video"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/step1"
+        app:layout_constraintBottom_toTopOf="@id/step2"/>
+
+    <Button
+        android:id="@+id/uploadOriginal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="8dp"
+        android:layout_marginStart="8dp"
+        android:onClick="UploadOriginal"
+        android:text="Upload Original Choreography"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/step2"
+        app:layout_constraintBottom_toTopOf="@id/uploadRehearsal"/>
+
+    <Button
+        android:id="@+id/uploadRehearsal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="8dp"
+        android:layout_marginStart="8dp"
+        android:onClick="UploadRehearsal"
+        android:text="Upload Rehearsal"
+        app:layout_constraintTop_toBottomOf="@id/uploadOriginal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/originalCheck"/>
+
+  <Button
+      android:id="@+id/compareVideos"
+      android:layout_width="match_parent"
+      android:layout_height="0dp"
+      android:layout_margin="8dp"
+      android:onClick="CompareVideos"
+      android:text="Compare Videos"
+      app:layout_constraintTop_toBottomOf="@id/step3"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintBottom_toBottomOf="parent"
+      />
+
+  <TextView
+      android:id="@+id/step1"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_margin="8dp"
+      android:layout_marginStart="8dp"
+      android:layout_marginEnd="8dp"
+      android:text="@string/step1"
+      android:textAlignment="center"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/step2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/step2"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/trimVideo"
+        app:layout_constraintBottom_toTopOf="@id/uploadOriginal"/>
+
+  <TextView
+      android:id="@+id/step3"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_margin="8dp"
+      android:layout_marginStart="8dp"
+      android:layout_marginEnd="8dp"
+      android:text="@string/step3"
+      android:textAlignment="center"
+      app:layout_constraintTop_toBottomOf="@id/originalCheck"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintBottom_toTopOf="@id/compareVideos"
+      />
+
+  <CheckBox
+      android:id="@+id/originalCheck"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Original Uploaded"
+      android:clickable="false"
+      app:layout_constraintTop_toBottomOf="@id/uploadRehearsal"
+      app:layout_constraintLeft_toLeftOf="parent"
+      app:layout_constraintRight_toLeftOf="@id/rehearsalCheck"
+      app:layout_constraintBottom_toTopOf="@id/step3"/>
+
+  <CheckBox
+      android:id="@+id/rehearsalCheck"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Rehearsal Uploaded"
+      android:clickable="false"
+      app:layout_constraintTop_toBottomOf="@id/uploadRehearsal"
+      app:layout_constraintLeft_toRightOf="@id/originalCheck"
+      app:layout_constraintRight_toRightOf="parent"
+      app:layout_constraintBottom_toTopOf="@id/step3"/>
+
+</android.support.constraint.ConstraintLayout>

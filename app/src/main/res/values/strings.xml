@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Compare Dance</string>
+    <string name="title_activity_trim_video">Trim Video</string>
+    <string name="step1">Step 1: Trim your dance videos so that they begin on the same counts of 8 and end on the same counts of 8</string>
+    <string name="step2">Step 2: Upload the Original Routine and Rehearsal Video you would like to compare</string>
+    <string name="step3">Step 3: Compare both of the videos</string>
+    <string name="original_frame">original frame</string>
+    <string name="rehearsal_frame">rehearsal frame</string>
+</resources>
